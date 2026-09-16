@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pouria Sarmasti — Software Engineer</title>
+    <meta name="description" content="Pouria Sarmasti — Software Engineer. AI that ships, not just demos." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Inter for Latin UI, Vazirmatn for Persian (applied via html[lang='fa']) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Theme boot: apply the stored/OS theme class before first paint so
+         the page never flashes the wrong theme. Dark is the default (no class). -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('pouria-dev-theme');
+          var dark =
+            stored === 'dark' ||
+            (stored !== 'light' &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.classList.toggle('light', !dark);
+          document.documentElement.classList.toggle('dark', dark);
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Vite mounts the React app here; #bg canvas + veil render inside it -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
