@@ -173,6 +173,13 @@ key is **env-only by design** (never hard-coded in `src/`):
 
 Without the key, the form shows an honest notice and falls back to a `mailto:` link.
 
+## Traffic stats (GoatCounter)
+
+The site loads `//gc.zgo.at/count.js` with `data-goatcounter="https://pssolo.goatcounter.com/count"`
+(see `index.html`). It's cookieless and counts one view per full page load — in-page
+hash jumps (`#about`, …) are not separate views. Check stats at
+`https://pssolo.goatcounter.com/`.
+
 ## Theme & language
 
 - **Theme** — Light / System / Dark via the header pill (desktop) or the mobile menu.
